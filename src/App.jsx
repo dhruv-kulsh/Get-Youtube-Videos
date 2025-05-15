@@ -1,7 +1,7 @@
 export const App = () => {
   return (
     <>
-    helooc hcekc
+    New comp to be added
     </>
   )
 }
