@@ -20,19 +20,27 @@ export const App = () => {
   }
 
   useEffect(() => {
-
     fetchData();
   }, []);
 
   useEffect(() => {
     console.log(apiData);
-    
-  }, [apiData])
+  }, [apiData]);
 
   return (
     <>
       <Screen />
-      {/* {apiData} */}
+      <h1>Title</h1>
+      {
+        apiData?.data.data.map((datapoint) => {
+          return (
+          <>
+          <ul>
+            {datapoint.items.snippet.title}
+          </ul>
+          </>)
+        })
+      }
     </>
   )
 }
