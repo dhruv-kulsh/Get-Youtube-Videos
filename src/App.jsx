@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Screen } from "./Screen"
 
 export const App = () => {
@@ -12,18 +12,27 @@ export const App = () => {
       const res = await fetch(api);
       const data = await res.json();
       console.log(data);
-      setApiData[data];
-    } catch(error) {
+      setApiData(data);      
+    } catch (error) {
       console.log(error.message);
 
     }
   }
 
-  fetchData();
+  useEffect(() => {
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    console.log(apiData);
+    
+  }, [apiData])
+
   return (
     <>
       <Screen />
-      {apiData}
+      {/* {apiData} */}
     </>
   )
 }
