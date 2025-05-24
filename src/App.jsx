@@ -32,11 +32,11 @@ export const App = () => {
       <Screen />
       <h1>Title</h1>
       {
-        apiData?.data.data.map((datapoint) => {
+        apiData?.data?.data?.map((datapoint) => {
           return (
           <>
           <ul>
-            {datapoint.items.snippet.title}
+            <li key={datapoint.items.id}>{datapoint.items.snippet.title}</li>
           </ul>
           </>)
         })
