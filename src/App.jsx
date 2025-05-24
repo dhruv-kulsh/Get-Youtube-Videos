@@ -12,7 +12,7 @@ export const App = () => {
       const res = await fetch(api);
       const data = await res.json();
       console.log(data);
-      setApiData(data);      
+      setApiData(data);
     } catch (error) {
       console.log(error.message);
 
@@ -34,11 +34,10 @@ export const App = () => {
       {
         apiData?.data?.data?.map((datapoint) => {
           return (
-          <>
-          <ul>
-            <li key={datapoint.items.id}>{datapoint.items.snippet.title}</li>
-          </ul>
-          </>)
+            <ul key={datapoint.items.id}>
+              <li>{datapoint.items.snippet.title}</li>
+            </ul>
+          )
         })
       }
     </>
