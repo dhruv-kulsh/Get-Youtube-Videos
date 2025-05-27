@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { Screen } from "./Screen"
+import { Screen } from "./Screen";
+import { appContext, appProvider } from "./context";
 
 export const App = () => {
   const api = "https://api.freeapi.app/api/v1/public/youtube/videos";
 
-  const [apiData, setApiData] = useState(null);
 
   const fetchData = async () => {
 
@@ -35,7 +35,7 @@ export const App = () => {
         apiData?.data?.data?.map((datapoint) => {
           return (
             <ul key={datapoint.items.id}>
-              <li>Title :- {datapoint.items.snippet.title}</li>
+              <li>{datapoint.items.snippet.title}</li>
             </ul>
           )
         })
