@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Screen } from "./Screen";
-import { appContext, appProvider } from "./context";
+import { globalContext } from "./context";
 
 export const App = () => {
   const api = "https://api.freeapi.app/api/v1/public/youtube/videos";
