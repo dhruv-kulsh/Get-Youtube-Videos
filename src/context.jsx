@@ -12,9 +12,9 @@ const appProvider = ({ children }) => {
     // const [data, setData] = useReducer(reducer, initialData);
     const [data, setData] = useState(initialData);
 
-    return(
+    return (
         <>
-            <appContext.Provider value={{data}}>{children}</appContext.Provider>
+            <appContext.Provider value={{ data }}>{children}</appContext.Provider>
         </>
     )
 }
@@ -23,4 +23,4 @@ const globalContext = () => {
     return useContext(appContext)
 }
 
-export {globalContext};
+export { globalContext };
