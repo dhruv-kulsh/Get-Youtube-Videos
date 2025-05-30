@@ -2,7 +2,7 @@ import { createContext, useReducer, useContext, useState } from "react";
 
 const appContext = createContext();
 
-const appProvider = ({ children }) => {
+const AppProvider = ({ children }) => {
 
     const initialData = {
         api: "https://api.freeapi.app/api/v1/public/youtube/videos",
@@ -24,3 +24,5 @@ const globalContext = () => {
 }
 
 export { globalContext };
+
+export {AppProvider}
