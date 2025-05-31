@@ -5,17 +5,17 @@ import { globalContext } from "./context";
 export const App = () => {
 
   const { data } = globalContext();
-  // const {api, }
+  const {api, count, number} = data;
 
-  console.log(data);
-  
+  // console.log(data);
+  console.log(api);  
 
 
   const fetchData = async () => {
 
     try {
       const res = await fetch(api);
-      const data = await res.json();
+      const data = await res.json();      
       console.log(data);
     } catch (error) {
       console.log(error.message);
@@ -28,14 +28,14 @@ export const App = () => {
   }, []);
 
   useEffect(() => {
-    console.log(api);
+    // console.log(api);
   }, [api]);
 
   return (
     <>
       <Screen />
       <h1>Title</h1>
-      {count}
+      {count + 1}
       {
         api?.data?.data?.map((datapoint) => {
           return (

@@ -9,7 +9,6 @@ const AppProvider = ({ children }) => {
         count: 0,
         number: 1
     };
-    // const [data, setData] = useReducer(reducer, initialData);
     const [data, setData] = useState(initialData);
 
     return (
