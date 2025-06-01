@@ -38,5 +38,4 @@ const globalContext = () => {
 }
 
 export { globalContext };
-
 export { AppProvider }
