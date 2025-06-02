@@ -7,8 +7,6 @@ export const App = () => {
   const { data, apiData } = globalContext();
   const {count, number} = data;
 
-
-
   return (
     <>
       <Screen />
